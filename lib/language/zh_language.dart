@@ -17,11 +17,13 @@ class ZhLanguage {
     'no_data': '沒有找到數據',
     'play': '玩',
     'sound': '聲音',
-    'yes': 'Yes',
-    'no': 'No',
-    'game_over': 'Game Over',
-    'are_you_want_to_replay': 'Are you want to replay?',
-    'conglaturation': 'Conglaturation!!!',
-    'level_complete': 'Level completed.'
+    'yes': '是的',
+    'no': '不',
+    'game_over': '遊戲結束',
+    'are_you_want_to_replay': '你想重播嗎？',
+    'conglaturation': '恭喜!!!',
+    'level_complete': '等級完成。',
+    'next': '下一個',
+    'level': '等級'
   };
 }

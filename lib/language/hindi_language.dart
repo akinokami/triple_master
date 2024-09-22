@@ -17,11 +17,13 @@ class HiLanguage {
     'no_data': 'कोई डेटा उपलब्ध नहीं है',
     'play': 'खेल',
     'sound': 'आवाज़',
-    'yes': 'Yes',
-    'no': 'No',
-    'game_over': 'Game Over',
-    'are_you_want_to_replay': 'Are you want to replay?',
-    'conglaturation': 'Conglaturation!!!',
-    'level_complete': 'Level completed.'
+    'yes': 'हाँ',
+    'no': 'नहीं',
+    'game_over': 'खेल खत्म',
+    'are_you_want_to_replay': 'क्या आप दोबारा खेलना चाहते हैं?',
+    'conglaturation': 'बधाई!!!',
+    'level_complete': 'स्तर पूर्ण।',
+    'next': 'अगला',
+    'level': 'स्तर'
   };
 }

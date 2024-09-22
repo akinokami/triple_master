@@ -22,6 +22,8 @@ class EnLanguage {
     'game_over': 'Game Over',
     'are_you_want_to_replay': 'Are you want to replay?',
     'conglaturation': 'Conglaturation!!!',
-    'level_complete': 'Level completed.'
+    'level_complete': 'Level completed.',
+    'next': 'Next',
+    'level': 'Level'
   };
 }

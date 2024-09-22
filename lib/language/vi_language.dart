@@ -15,11 +15,13 @@ class ViLanguage {
     'please_wait': 'Vui lòng đợi',
     'play': 'Chơi',
     'sound': 'Âm thanh',
-    'yes': 'Yes',
-    'no': 'No',
-    'game_over': 'Game Over',
-    'are_you_want_to_replay': 'Are you want to replay?',
-    'conglaturation': 'Conglaturation!!!',
-    'level_complete': 'Level completed.'
+    'yes': 'Đúng',
+    'no': 'KHÔNG',
+    'game_over': 'Trò chơi kết thúc',
+    'are_you_want_to_replay': 'Bạn có muốn phát lại không?',
+    'conglaturation': 'Chúc mừng!!!',
+    'level_complete': 'Đã hoàn thành cấp độ.',
+    'next': 'Kế tiếp',
+    'level': 'Mức độ'
   };
 }

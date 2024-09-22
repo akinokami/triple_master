@@ -8,7 +8,7 @@ class CustomLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LoadingAnimationWidget.beat(
+    return LoadingAnimationWidget.halfTriangleDot(
       color: secondaryColor,
       size: 30.sp,
     );

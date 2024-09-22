@@ -28,4 +28,4 @@ Color iconGrey = const Color(0xFFB6B6B6);
 
 Color silver = const Color(0xFFC0C0C0);
 
-Color backgroundColor = const Color(0xfffaf8ef);
+Color backgroundColor = const Color(0xfffed8d7); //const Color(0xfffaf8ef);

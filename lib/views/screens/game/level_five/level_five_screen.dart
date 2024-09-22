@@ -1,0 +1,314 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:sport_sort/utils/dimen_const.dart';
+import 'package:sport_sort/views/screens/game/level_five/box_five_widget.dart';
+import 'package:sport_sort/views/widgets/custom_loading.dart';
+
+import '../../../../controller/level_five_controller.dart';
+import '../../../widgets/custom_game_button.dart';
+import '../../../widgets/custom_text.dart';
+import '../../settings/game_setting_screen.dart';
+
+class LevelFiveScreen extends StatelessWidget {
+  const LevelFiveScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final levelFiveController = Get.put(LevelFiveController());
+    return Scaffold(
+        body: SafeArea(
+      child: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              "assets/home_new.webp",
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+            padding: EdgeInsets.all(10.w),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CustomGameButton(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      height: 35.w,
+                      width: 35.w,
+                      icon: Icons.arrow_back,
+                      iconColor: Colors.white,
+                    ),
+                    CustomText(
+                      text: '${'level'.tr} 5',
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    CustomGameButton(
+                      onTap: () {
+                        Get.to(() => const GameSettingScreen());
+                      },
+                      height: 35.w,
+                      width: 35.w,
+                      icon: Icons.settings,
+                      iconColor: Colors.white,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 1.sh * 0.10,
+                ),
+                Expanded(
+                  child: Obx(
+                    () => levelFiveController.isLoading.value == true
+                        ? const Center(
+                            child: CustomLoading(),
+                          )
+                        : ListView.builder(
+                            itemCount: levelFiveController.gameData.length,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: EdgeInsets.only(bottom: 3.h),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport1 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport1',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport2 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport2',
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 3.h,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport3 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport3',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport4 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport4',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport5 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport5',
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 3.h,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport6 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport6',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport7 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport7',
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 3.h,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport8 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport8',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport9 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport9',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport10 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport10',
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 3.h,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport11 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport11',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport12 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport12',
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 3.h,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport13 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport13',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport14 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport14',
+                                        ),
+                                        kSizedBoxW3,
+                                        BoxFiveWidget(
+                                          levelFiveController:
+                                              levelFiveController,
+                                          sports: levelFiveController
+                                                  .gameData[index].sport15 ??
+                                              [],
+                                          gameIndex: index,
+                                          sportType: 'sport15',
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              );
+                            }),
+                  ),
+                ),
+                Obx(
+                  () => Container(
+                    height: 47.h,
+                    width: 1.sw * 0.80,
+                    decoration: BoxDecoration(
+                        color: Colors.grey.shade400,
+                        borderRadius: BorderRadius.circular(10.r)),
+                    alignment: Alignment.center,
+                    child: SizedBox(
+                      width: 1.sw * 0.75,
+                      child: ListView.builder(
+                          itemCount: levelFiveController.mergeList.length,
+                          scrollDirection: Axis.horizontal,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: EdgeInsets.only(right: 10.w),
+                              child: Image.asset(
+                                levelFiveController.mergeList[index].image ??
+                                    '',
+                                width: 30.w,
+                                height: 30.w,
+                              ),
+                            );
+                          }),
+                    ),
+                  ),
+                ),
+                kSizedBoxH20
+              ],
+            )),
+      ),
+    ));
+  }
+}

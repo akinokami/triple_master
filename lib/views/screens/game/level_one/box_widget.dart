@@ -19,7 +19,7 @@ class BoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 80.h,
+      width: 100.w,
       height: 60.h,
       alignment: Alignment.bottomCenter,
       decoration: const BoxDecoration(
@@ -27,7 +27,7 @@ class BoxWidget extends StatelessWidget {
           image: AssetImage(
             "assets/box.webp",
           ),
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
         ),
       ),
       child: Padding(

@@ -20,7 +20,7 @@ class SoundController extends GetxController {
   }
 
   void playSound() async {
-    player.play(AssetSource('theme_soung.mp3'));
+    player.play(AssetSource('theme_sound.mp3'));
   }
 
   void muteUnmute() {

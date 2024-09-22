@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Color primaryColor = const Color.fromARGB(255, 255, 255, 255);
-Color secondaryColor = const Color.fromARGB(255, 25, 127, 76);
+Color secondaryColor = const Color(0xff8f7a66);
 Color cardColor = const Color(0xff21282d);
 Color lightWhiteColor = const Color.fromARGB(255, 245, 245, 245);
 Color whiteColor = const Color.fromARGB(255, 255, 255, 255);

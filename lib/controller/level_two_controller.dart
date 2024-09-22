@@ -1,8 +1,11 @@
 import 'package:get/get.dart';
+import 'package:sport_sort/controller/level_controller.dart';
 import 'package:sport_sort/models/sport_model.dart';
 
 import '../models/game.dart';
+import '../services/local_storage.dart';
 import '../utils/constants.dart';
+import '../utils/enum.dart';
 
 class LevelTwoController extends GetxController {
   RxList<GameData> gameData = <GameData>[].obs;
@@ -14,6 +17,7 @@ class LevelTwoController extends GetxController {
   // final isContain4 = true.obs;
   // final isContain5 = true.obs;
   final clickCount = 0.obs;
+  final levelController = Get.put(LevelController());
 
   @override
   void onInit() {
@@ -94,6 +98,8 @@ class LevelTwoController extends GetxController {
     }
 
     if (clickCount.value == 21) {
+      levelController.isLvlThreeLock.value = false;
+      LocalStorage.instance.write(StorageKey.isLvlThreeLock.name, false);
       constants.showConglaturationDialog(
         title: 'conglaturation'.tr,
         desc: 'level_complete'.tr,

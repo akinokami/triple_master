@@ -16,6 +16,7 @@ class LevelOneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final levelOneController = Get.put(LevelOneController());
+
     return Scaffold(
         body: SafeArea(
       child: Container(
